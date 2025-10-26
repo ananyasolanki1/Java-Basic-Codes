@@ -1,18 +1,66 @@
-public class PalinStr {     // String is palindrome or not
+public class PalinStr { // String is palindrome or not
     public static void main(String[] args) {
-        String s = "";
-        boolean ans = palin(s);
-        System.out.println(ans);
+        // String s = "A man, a plan, a canal: Panama";
+        // boolean ans = palin(s);
+
+        String s = "anarna";
+        boolean ans = palin(0, s);
+        if (ans) {
+            System.out.println();
+            System.out.println("Palindrome");
+        } else {
+            System.out.println();
+            System.out.println("Not Palindrome");
+        }
     }
 
-    public static boolean palin(String str) {
-        int left = 0;
-        int right = str.length() - 1;
-        while (left < right) {
-            if (str.toLowerCase().charAt(left++) != str.toLowerCase().charAt(right--)) {
-                return false;
-            }
+    // public static boolean palin(String str) {            // Method 1:   TC: O(n/2) => O(n)    SC:O(1)
+    //     int left = 0;                                    // Defining left and right
+    //     int right = str.length() - 1;
+    //     while (left < right) {
+    //         if (str.toLowerCase().charAt(left++) != str.toLowerCase().charAt(right--)) {
+    //         return false;
+    //         }
+    //     }
+    //     return true;
+    // }
+
+
+    // public static boolean palin(String str) {             // Method 2:  TC: O(n/2) => O(n)   SC:O(1)
+    //     int ln = str.length();                            // without left and right pointers
+    //     for (int i = 0; i < ln/2; i++) {
+    //         if (str.toLowerCase().charAt(i) != str.toLowerCase().charAt(ln - 1 - i)) {
+    //         return false;
+    //         }
+    //     }
+    //     return true;
+    // }
+
+
+    // public static boolean palin(String str) {              // Method 3:  TC: O(n/2) => O(n)   SC: O(1)   
+    //     int ln = str.length();                             // considering only alphabets and numbers
+    //     int left = 0;
+    //     int right = ln - 1;
+    //     while (left < right) {
+    //         if (!Character.isLetterOrDigit(str.charAt(left))) {
+    //             left++;
+    //         } else if (!Character.isLetterOrDigit(str.charAt(right))) {
+    //             right--;
+    //         } else if (str.toLowerCase().charAt(left++) != str.toLowerCase().charAt(right--)) {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
+
+
+    public static boolean palin(int i, String str) {            // Method 4: Recursion   TC: O(n/2) => O(n)   SC: O(n/2) as each call is stored in stack
+        if (i >= str.length()/2) {
+            return true;
         }
-        return true;
+        if (str.charAt(i) != str.charAt(str.length() - i - 1)) {
+            return false;
+        }
+        return palin(i + 1, str);
     }
 }
