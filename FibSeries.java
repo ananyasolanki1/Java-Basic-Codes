@@ -17,6 +17,7 @@ class FibSeries {
         // for (int i : narr) {
         //     System.out.println(i);
         // }
+        sc.close();
     }
     
     // static int[] fibo(int n) {        // Method 1: Creating int[] array

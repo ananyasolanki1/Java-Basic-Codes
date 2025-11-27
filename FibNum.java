@@ -6,6 +6,7 @@ class FibNum {
         System.out.print("Enter Fibonacci series index no. ");
         int num = sc.nextInt();
         System.out.print("Fibonacci number at index " + num + " is " + fibo(num));
+        sc.close();
     }
     
     // static int fibo(int n) {        // Optimal  TC: O(n)  SC: O(1)
