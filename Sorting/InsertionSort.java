@@ -39,7 +39,7 @@ class InsertionSort {
     
     static void insertSort(int[] arr) {           // TC:  Worst: O(n²), Avg: O(n²), Best: O(n), less writes as it just shifts and writes one final key
         int n = arr.length;                       // SC: O(1)
-        int temp;                                 // Best and ideal one to use
+        // int temp;                              // Best and ideal one to use
         int j;
         int key;
         for (int i = 1; i < n; i++) {
