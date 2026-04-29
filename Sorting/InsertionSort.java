@@ -1,13 +1,14 @@
-import java.util.*;
+import java.util.Arrays;
 
 class InsertionSort {
     public static void main(String[] args) {
         int arr[] = {14, 9, 6, 12, 4, 15};
         insertSort(arr);
     }
-    
-    // static void insertSort(int arr[]) {     // TC:  Worst: O(n²), Avg: O(n²), Best: O(n²) no early stop if array is sorted
-    //     int n = arr.length;                 // SC: O(1)
+
+    // static void insertSort(int arr[]) { // TC: Worst: O(n²), Avg: O(n²), Best:
+    //     // O(n²) // no early stop if array is sorted
+    //     int n = arr.length; // SC: O(1)
     //     int temp;
     //     for (int i = 1; i < n; i++) {
     //         for (int j = i; j >= 1; j--) {
@@ -19,10 +20,11 @@ class InsertionSort {
     //         }
     //     }
     //     System.out.println(Arrays.toString(arr));
-    // }
-    
-    // static void insertSort(int[] arr) {      // TC:  Worst: O(n²), Avg: O(n²), Best: O(n) as while fails if already sorted. More writes due to adjacent swaps
-    //     int n = arr.length;                  // SC: O(1)
+    // }    
+
+    // static void insertSort(int[] arr) { // TC: Worst: O(n²), Avg: O(n²), Best:
+    //     // O(n) as while fails if already sorted. More writes due to adjacent swaps
+    //     int n = arr.length; // SC: O(1)
     //     int temp;
     //     int j;
     //     for (int i = 0; i < n; i++) {
@@ -36,10 +38,10 @@ class InsertionSort {
     //     }
     //     System.out.println(Arrays.toString(arr));
     // }
-    
-    static void insertSort(int[] arr) {           // TC:  Worst: O(n²), Avg: O(n²), Best: O(n), less writes as it just shifts and writes one final key
-        int n = arr.length;                       // SC: O(1)
-        // int temp;                              // Best and ideal one to use
+
+        static void insertSort(int[] arr) {      // TC: Worst: O(n²), Avg: O(n²), Best: O(n), less writes as it just shifts and writes one final key
+        int n = arr.length;                      // SC: O(1)
+        // int temp;                             // Best and ideal one to use
         int j;
         int key;
         for (int i = 1; i < n; i++) {
