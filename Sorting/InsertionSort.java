@@ -6,9 +6,8 @@ class InsertionSort {
         insertSort(arr);
     }
 
-    // static void insertSort(int arr[]) { // TC: Worst: O(n²), Avg: O(n²), Best:
-    //     // O(n²) // no early stop if array is sorted
-    //     int n = arr.length; // SC: O(1)
+    // static void insertSort(int arr[]) {            // TC: Worst: O(n²), Avg: O(n²), Best: O(n²), no early stop if array is sorted
+    //     int n = arr.length;                        // SC: O(1)
     //     int temp;
     //     for (int i = 1; i < n; i++) {
     //         for (int j = i; j >= 1; j--) {
@@ -22,9 +21,8 @@ class InsertionSort {
     //     System.out.println(Arrays.toString(arr));
     // }    
 
-    // static void insertSort(int[] arr) { // TC: Worst: O(n²), Avg: O(n²), Best:
-    //     // O(n) as while fails if already sorted. More writes due to adjacent swaps
-    //     int n = arr.length; // SC: O(1)
+    // static void insertSort(int[] arr) {            // TC: Worst: O(n²), Avg: O(n²), Best: O(n) as while fails if already sorted. More writes due to adjacent swaps
+    //     int n = arr.length;                        // SC: O(1)
     //     int temp;
     //     int j;
     //     for (int i = 0; i < n; i++) {
